@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lamX1 --all
+ls -l -a --all -1
