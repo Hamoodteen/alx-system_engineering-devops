@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l -a --all -m -1
+ls -Ap | sort -k1.1,1.1 -k1.2n -k1.2,1.99 | tr '\n' ','; echo
