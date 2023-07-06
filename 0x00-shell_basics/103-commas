@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -1 -v -F | sed 's/\n/, /g' | sed 's/\/\./\./' | sed 's/\.\//\//g' | sed 's/\/$/\/\n/'
+ls -amvp
