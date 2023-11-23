@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#commentttttttttttttttttttttttttttttttttttt
+
+for i in {1..100}; do
+    if ((i % 3 == 0 && i % 5 != 0)); then
+	    echo "Fizz"
+	elif ((i % 5 == 0 && i % 3 != 0)); then
+	    echo "Buzz"
+	elif ((i % 5 == 0 && i % 3 == 0)); then
+	    echo "FizzBuzz"
+	else
+        echo "$i"
+	fi
+done
