@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#commentttttttttttttttttttttttttttttttttttt
+
+while IFS=: read -r username uid home; do
+    echo "$username:$uid:$home" | cut -d ':' -f 1,3,6
+done < /etc/passwd
