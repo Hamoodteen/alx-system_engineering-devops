@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#cccccccccccccccccccccccccccccccccccc
+
+kill "./4-to_infinity_and_beyond"
