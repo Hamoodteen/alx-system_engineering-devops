@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #cccccccccccccccccccccccccccccccccccc
 
-pkill -KILL -f "7-highlander"
+pkill -9 -f "7-highlander"
