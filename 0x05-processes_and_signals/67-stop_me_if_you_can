@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #cccccccccccccccccccccccccccccccccccc
 
-pkill -f 7-highlander
+pkill -15 -f 7-highlander
