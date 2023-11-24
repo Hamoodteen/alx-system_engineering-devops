@@ -5,6 +5,19 @@
 #include <unistd.h>
 
 /**
+* infinite_while - f
+* Return: int
+*/
+int infinite_while(void)
+{
+while (1)
+{
+sleep(1);
+}
+return (0);
+}
+
+/**
 * main - f
 * Return: int
 */
@@ -26,8 +39,7 @@ printf("Zombie process created, PID: %d\n", getpid());
 }
 else
 {
-printf("Zombie process created, PID: %d\n", getpid());
-exit(EXIT_SUCCESS);
+infinite_while();
 }
 }
 sleep(1);
