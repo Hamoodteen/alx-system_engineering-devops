@@ -1,47 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 /**
-* infinite_while - f
-* Return: int
-*/
-int infinite_while(void)
+ * main - f
+ * Return: 0
+ */
+int main(void)
 {
-while (1)
-{
-sleep(1);
-}
-return (0);
-}
+int i;
+pid_t zpid;
 
-/**
-* main - f
-* Return: int
-*/
-int main()
+for (i = 0; i < 5; i++)
 {
-int num_zombies = 5;
-pid_t child_pid;
-for (int i = 0; i < num_zombies; ++i)
+zpid = fork();
+if (zpid)
 {
-child_pid = fork();
-if (child_pid == -1)
-{
-perror("Fork failed");
-exit(EXIT_FAILURE);
-}
-if (child_pid > 0)
-{
-printf("Zombie process created, PID: %d\n", getpid());
+printf("Zombie process created, PID: %i\n", zpid);
 }
 else
 {
-infinite_while();
+exit(0);
 }
 }
-sleep(1);
+sleep(100);
 return (0);
 }
