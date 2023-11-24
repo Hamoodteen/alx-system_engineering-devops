@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#cccccccccccccccccccccccccccccccccccc
+# shellcheck disable=SC2009
+
+ps axuf | grep bash
