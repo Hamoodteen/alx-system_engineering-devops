@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #cccccccccccccccccccccccccccccccccccc
 
-ps aux
+ps -a -x -u -f
