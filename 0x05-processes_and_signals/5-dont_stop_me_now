@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #cccccccccccccccccccccccccccccccccccc
 
-kill "$(ps -x | pgrep -f 'To infinity and beyond')"
+kill "$(ps -x | pgrep -f (To infinity and beyond))"
