@@ -4,6 +4,19 @@
 #include <sys/wait.h>
 
 /**
+* infinite_while - f
+* Return: int
+*/
+int infinite_while(void)
+{
+while (1)
+{
+sleep(1);
+}
+return (0);
+}
+
+/**
  * main - f
  * Return: 0
  */
@@ -24,6 +37,6 @@ else
 exit(0);
 }
 }
-sleep(100);
+infinite_while();
 return (0);
 }
