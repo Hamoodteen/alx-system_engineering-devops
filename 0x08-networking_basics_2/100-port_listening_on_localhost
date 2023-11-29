@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#cccccccccccccccccccccccccccccccccccc
+
+nc -l localhost 98
