@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#cccccccccccccccccccccccccccccccccccc
+
+sudo nano /etc/hosts
