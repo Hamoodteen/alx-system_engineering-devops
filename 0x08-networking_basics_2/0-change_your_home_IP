@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #cccccccccccccccccccccccccccccccccccc
 
-sudo nano /etc/hosts
+sudo bash -c 'echo "127.0.0.2 localhost" >> /etc/hosts'
+sudo bash -c 'echo "8.8.8.8 facebook.com" >> /etc/hosts'
