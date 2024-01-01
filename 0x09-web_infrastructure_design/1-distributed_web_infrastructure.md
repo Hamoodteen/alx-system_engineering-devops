@@ -1,5 +1,10 @@
 <h1>1-distributed_web_infrastructure</h1><hr>
 
 <ol>
-<li> first </li>
+<li> firstable , I've added a copy of database to achieve replication , and to reduce SPOF . </li>
+<li> I've configured load balancer to work with the least connection algorithm , finding the server that don't have a lot of connestions to be suitable . </li>
+<li> working with active-passive setup , it works only with one server , the another in stand-by mode , and retieving from the primary database . </li>
+<li> it copies the original database to another and use it when needed , and update it every time </li>
+<li> the primary database handles writing operations and the replica handles reading and restore if the first fails or beeing updated . </li>
+<li> <i> SPOF is in the load balancer , it just one taking from all hosts (if it failes , all requests will fail and gives error responce) . </i> </li>
 </ol>
