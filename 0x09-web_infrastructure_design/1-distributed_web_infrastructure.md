@@ -11,8 +11,8 @@
 <ui> <h3> second question : </h3>
 <li> SPOF is in the load balancer , it just one taking from all hosts (if it failes , all requests will fail and gives error responce) . </li>
 <li>
-<ui> because of no firewall , no rules to control traffic , it may be robot or malicious to attack website </ui>
-<ui> no HTTPS , no ssl or certicicate , foobar.com may be malicious website to attack host with malwares , or being unknow website </ui>
+<ul> because of no firewall , no rules to control traffic , it may be robot or malicious to attack website </ul>
+<ul> no HTTPS , no ssl or certicicate , foobar.com may be malicious website to attack host with malwares , or being unknow website </ul>
 </li>
 </ui>
 </ol>
