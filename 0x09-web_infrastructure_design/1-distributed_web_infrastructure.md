@@ -14,6 +14,6 @@
 <ul> - because of no firewall , no rules to control traffic , it may be robot or malicious to attack website </ul>
 <ul> - no HTTPS , no ssl or certicicate , foobar.com may be malicious website to attack host with malwares , or being unknow website </ul>
 </li>
-
+<li> no monitoring services cause a lot of faliures in the website that not fixed or revised , and no upgrades or security in foobar.com </li>
 </ui>
 </ol>
