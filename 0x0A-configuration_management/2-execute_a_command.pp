@@ -1,6 +1,7 @@
 # create_a_file.pp
 
-exec { 'killmenow_process':
+exec { 'pkill':
   command     => 'pkill -f "killmenow"',
   path        => ['/bin', '/usr/bin'],
+  provider => 'shell',
 }
