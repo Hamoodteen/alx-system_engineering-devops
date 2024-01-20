@@ -1,7 +1,6 @@
 # ~/.ssh/config
 
-Host 54.157.137.224
-    HostName 54.157.137.224
+Host 3.80.19.173
     User ubuntu
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
