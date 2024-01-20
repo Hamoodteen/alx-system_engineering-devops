@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-ssh ubuntu@54.87.238.93
+#commenttttttttttttttttttttttttttttttt
+ssh -i ~/.ssh/school ubuntu@54.87.238.93
