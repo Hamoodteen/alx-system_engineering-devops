@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #commenttttttttttttttttttttttttttttttt
-ssh-keygen -b 4096;
-;
+ssh-keygen -b 4096 ~/.ssh/school;
 betty;
 betty
