@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-docker exec -ti 19fbc82d2c85 echo "<VirtualHost *:8080>
-    DocumentRoot /var/www/html   # Adjust the path to your "hello.txt" directory
+echo "<VirtualHost *:8080>
+    DocumentRoot /var/www/html
     ServerName localhost
 </VirtualHost>" >> /etc/apache2/apache2.conf
 sudo a2ensite 000-default.conf
