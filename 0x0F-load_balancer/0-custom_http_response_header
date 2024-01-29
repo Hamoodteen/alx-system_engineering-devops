@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #commenttttttttttttttttttttttttttttttt
 echo "http {
-
     server {
         listen 80;
         server_name 472055-web-01;
@@ -11,6 +10,13 @@ echo "http {
         }
     }
 
+    upstream backend_server1 {
+        server 472055-web-01:80;
+    }
+}" | sudo tee /etc/nginx/sites-available/web-01 > /dev/null;
+sudo ln -s /etc/nginx/sites-available/web-01 /etc/nginx/sites-enabled/;
+sudo systemctl reload nginx;
+echo "http {
     server {
         listen 80;
         server_name 472055-web-02;
@@ -20,26 +26,9 @@ echo "http {
         }
     }
 
-    server {
-        listen 80;
-        server_name 472055-web-03;
-
-        location / {
-            add_header X-Served-By \"472055-web-03\";
-        }
-    }
-
-    upstream backend_server1 {
-        server 472055-web-01:80;
-    }
-
     upstream backend_server2 {
         server 472055-web-02:80;
     }
-
-    upstream backend_server3 {
-        server 472055-web-03:80;
-    }
-
-}" | sudo tee -a /etc/nginx/nginx.conf > /dev/null
-sudo systemctl reload nginx
+}" | sudo tee /etc/nginx/sites-available/web-02 > /dev/null;
+sudo ln -s /etc/nginx/sites-available/web-02 /etc/nginx/sites-enabled/;
+sudo systemctl reload nginx;
