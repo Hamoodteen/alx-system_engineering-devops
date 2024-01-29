@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#commenttttttttttttttttttttttttttttttt
+sudo apt-get update;
+sudo apt-get install --no-install-recommends software-properties-common;
+sudo apt-get install haproxy=2.9.\*;
+echo "global
+    log /dev/log local0
+    log /dev/log local1 notice
+    chroot /var/lib/haproxy
+    stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
+    stats timeout 30s
+    user haproxy
+    group haproxy
+    daemon
+
+defaults
+    log global
+    mode http
+    option httplog
+    option dontlognull
+    timeout connect 5000
+    timeout client 50000
+    timeout server 50000
+
+frontend http_front
+    bind *:80
+    stats uri /haproxy?stats
+
+    default_backend http_back
+
+backend http_back
+    balance roundrobin
+	server 472055-lb-01 52.201.194.234:80 check
+    server 472055-web-01 3.80.19.173:80 check
+    server 472055-web-02 34.205.65.255:80 check" >> /etc/haproxy/haproxy.cfg;
+sudo systemctl restart haproxy;
