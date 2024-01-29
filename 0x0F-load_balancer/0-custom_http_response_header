@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 #commenttttttttttttttttttttttttttttttt
+sudo apt-get -y update;
+sudo apt-get -y install nginx;
+sudo ufw allow 'Nginx HTTP';
+sudo chmod -R 755 /var/www;
 echo "http {
     server {
         listen 80;
