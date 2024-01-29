@@ -33,4 +33,5 @@ backend http_back
 	server 472055-lb-01 52.201.194.234:80 check
     server 472055-web-01 3.80.19.173:80 check
     server 472055-web-02 34.205.65.255:80 check" >> /etc/haproxy/haproxy.cfg;
-sudo systemctl restart haproxy;
+sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy;
+sudo service haproxy restart;

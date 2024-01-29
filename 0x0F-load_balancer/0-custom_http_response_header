@@ -35,4 +35,4 @@ echo "http {
     }
 }" | sudo tee /etc/nginx/sites-available/web-02 > /dev/null;
 sudo ln -s /etc/nginx/sites-available/web-02 /etc/nginx/sites-enabled/;
-sudo systemctl reload nginx;
+sudo sudo service nginx reload;
