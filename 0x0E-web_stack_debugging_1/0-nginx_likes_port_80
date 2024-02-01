@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #commenttttttttttttttttttttttttttt
-sudo echo "server {
+echo "server {
 
     listen 80;
     server_name web-01;
@@ -10,7 +10,7 @@ sudo echo "server {
         index index.html;
         }
     }" | sudo tee -a /var/www/html/index.html;
-sudo echo "##
+echo "##
 # You should look at the following URL's in order to grasp a solid understanding
 # of Nginx configuration files in order to fully unleash the power of Nginx.
 # https://www.nginx.com/resources/wiki/start/
