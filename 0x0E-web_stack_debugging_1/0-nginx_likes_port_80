@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#commenttttttttttttttttttttttttttt
+sudo echo "server {
+
+    listen 80;
+    server_name web-01;
+
+    location / {
+        root /var/www/html;
+        index index.html;
+        }
+    }" | sudo tee -a /var/www/html/index.html
