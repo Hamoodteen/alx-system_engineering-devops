@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #commenttttttttttttttttttttttttttt
 sed -i 's/listen *:80/listen 0.0.0.0:80/' /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx stop
