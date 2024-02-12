@@ -2,6 +2,7 @@
 #commenttttttttttttttttttttttttttt
 sudo apt update
 sudo apt -y install ufw
+sudo ufw reset
 sudo ufw default deny incoming
 sudo ufw default deny outgoing
 sudo ufw allow 22/tcp
