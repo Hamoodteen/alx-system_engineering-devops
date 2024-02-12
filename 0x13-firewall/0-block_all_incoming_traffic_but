@@ -4,7 +4,6 @@ ssh ubuntu@3.80.19.173
 sudo apt update
 sudo apt -y install ufw
 sudo ufw default deny incoming
-sudo ufw default deny outgoing
 sudo ufw allow 22/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80/tcp
