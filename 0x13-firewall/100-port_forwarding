@@ -3,4 +3,5 @@
 ssh ubuntu@3.80.19.173
 sudo ufw enable
 sudo ufw allow 8080/tcp
+sudo ufw allow 80/tcp
 sudo ufw reload
