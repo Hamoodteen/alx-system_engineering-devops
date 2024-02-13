@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 #commenttttttttttttttttttttttttttt
-sudo u - "$1"
-sudo whoami
+sudo -u "$1" whoami
