@@ -2,3 +2,6 @@
 #commenttttttttttttttttttttttttttt
 sudo nginx -p /etc/nginx -c nginx.conf -g 'user nginx; daemon off;'
 sudo nginx -p /etc/nginx -c nginx.conf -g 'daemon off;' -a 'listen 8080;'
+sudo sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
+chmod 700 /etc/nginx/nginx.conf
+sudo -u nginx service nginx restart
