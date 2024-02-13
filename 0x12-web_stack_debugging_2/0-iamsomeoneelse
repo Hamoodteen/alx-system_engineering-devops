@@ -2,4 +2,3 @@
 #commenttttttttttttttttttttttttttt
 sudo u - "$1"
 sudo whoami
-sudo u -
