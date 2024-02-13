@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#commenttttttttttttttttttttttttttt
+sudo nginx -p /etc/nginx -c nginx.conf -g 'user nginx; daemon off;'
+sudo nginx -p /etc/nginx -c nginx.conf -g 'daemon off;' -a 'listen 8080;'
