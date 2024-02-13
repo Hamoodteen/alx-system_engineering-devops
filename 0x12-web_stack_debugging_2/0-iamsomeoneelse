@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#commenttttttttttttttttttttttttttt
+sudo su - "$1"
+sudo whoami
+sudo su -
