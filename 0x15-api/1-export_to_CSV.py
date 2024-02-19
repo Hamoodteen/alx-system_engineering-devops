@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """commentttttttttttttttttttttttttttttttt"""
+import csv
 import requests
 import sys
-import csv
 
 
 if __name__ == "__main__":
@@ -17,7 +17,7 @@ if __name__ == "__main__":
         csv_file_name = 'USER_ID.csv'
         user_range = ((user - 1) * 20)
         with open(csv_file_name, 'w', newline='') as file:
-            writer = csv.writer(file)
+            writer = csv.writer(file, quoting=csv.QUOTE_ALL)
             for row in tasks_data[user_range:user_range + 20]:
                 resls = [
                     row['userId'],
