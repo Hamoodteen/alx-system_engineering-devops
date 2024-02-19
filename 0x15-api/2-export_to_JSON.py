@@ -26,7 +26,7 @@ if __name__ == "__main__":
         for item in data[str(user)]:
             item.pop("userId")
             item.pop("id")
-            item["tasks"] = item.pop("title")
+            item["task"] = item.pop("title")
             item["completed"] = item.pop("completed")
             item["username"] = user_data["username"]
         with open(json_file_name, "w") as json_file:
