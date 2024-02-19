@@ -14,7 +14,7 @@ if __name__ == "__main__":
         user_data = response.json()
         tasks = requests.get('https://jsonplaceholder.typicode.com/todos')
         tasks_data = tasks.json()
-        csv_file_name = 'USER_ID.csv'
+        csv_file_name = f'{user}.csv'
         user_range = ((user - 1) * 20)
         with open(csv_file_name, 'w', newline='') as file:
             writer = csv.writer(file, quoting=csv.QUOTE_ALL)
