@@ -19,6 +19,6 @@ if __name__ == "__main__":
         for i in range(user_range, user_range + 20):
             if tasks_data[i]['completed']:
                 done += 1
-                done_list.append(f"     {tasks_data[i]['title']}")
+                done_list.append(f"\t {tasks_data[i]['title']}")
         print(f"Employee {user_data['name']} is done with tasks({done}/20):")
         print(*done_list, sep="\n")
