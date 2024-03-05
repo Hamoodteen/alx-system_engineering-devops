@@ -3,8 +3,8 @@
 import requests
 
 
-def top_ten(subreddit_name):
-    url = f'https://www.reddit.com/r/{subreddit_name}/hot.json'
+def top_ten(subreddit):
+    url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     response = requests.get(url, params={'limit': 10})
     if response.status_code == 200:
         data = response.json()
