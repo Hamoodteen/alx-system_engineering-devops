@@ -3,7 +3,8 @@
 import requests
 
 
-def top_ten(subreddit):
+def count_words(subreddit, word_list):
+    print(word_list)
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     response = requests.get(url, params={'limit': 10})
     if response.status_code == 200:

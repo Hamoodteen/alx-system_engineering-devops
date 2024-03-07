@@ -3,7 +3,8 @@
 import requests
 
 
-def top_ten(subreddit):
+def recurse(subreddit, hot_list=[]):
+    print(hot_list)
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     response = requests.get(url, params={'limit': 10})
     if response.status_code == 200:
